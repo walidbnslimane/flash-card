@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Stack card and buttons vertically */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #6080A3;
+}
+
+.card-container {
+    perspective: 1000px;
+    /* Enables 3D effect */
+    margin-bottom: 20px;
+    /* Add space between card and buttons */
+}
+
+.card {
+    width: 420px;
+    /* Adjust width here */
+    height: 370px;
+    /* Adjust height here */
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0);
+    transform-origin: center;
+    /* Fix rotation anchor point */
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card .card-front,
+.card .card-back {
+    position: absolute;
+    width: 100%;
+    /* Match the card's width */
+    height: 100%;
+    /* Match the card's height */
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    /* Flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card .card-front {
+    background: #ABD8E7;
+    flex-direction: column;
+    /* Stack content vertically */
+    padding: 20px;
+}
+
+.card .card-front img {
+    width: 90%;
+    border-radius: 15px;
+    position: absolute;
+    top: 85px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card .card-front h1 {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 15px 0 10px;
+    position: absolute;
+    top: 30px;
+}
+
+.card .card-back {
+    background: #ABD8E7;
+    transform: rotateY(180deg);
+    color: #333;
+    padding: 20px;
+}
+
+.card .card-back h1 {
+    font-size: 20px;
+    /* Adjust font size for smaller cards */
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    /* Space between buttons */
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #35dc6f;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button.false {
+    background-color: #007bff;
+}
+
+.card-container {
+    display: none;
+}
+
+.card-container.active {
+    display: block;
+}
+
+.controls {
+    position: absolute;
+    bottom: 35px;
+}

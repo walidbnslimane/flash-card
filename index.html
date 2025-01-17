@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipping Card with Buttons</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="card-container active" id="card1">
+    <div class="card" id="flippingCard1">
+      <div class="card-front">
+        
+        <h1> B u _ _   Sh _ _ _ _</h1> 
+        <img src="images/Bull Shark.jpg" alt="Christmas Dinner" id="cardImage1" height="250px">
+      </div>
+      <div class="card-back">
+        <h1>Bull Shark</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container" id="card2">
+    <div class="card" id="flippingCard2">
+      <div class="card-front">
+        <h1>L_ _ _ f_ _ _</h1>
+        <img src="images/Lionfish.jpg" alt="Bird" id="cardImage2" height="250px">
+      </div>
+      <div class="card-back">
+        <h1>Lionfish</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container" id="card3">
+    <div class="card" id="flippingCard3">
+      <div class="card-front">
+        <h1>A _ _ _ _f_ _ _ </h1>
+        <img src="images/angelfish.jpg" alt="Bird" id="cardImage3"height="250px">
+      </div>
+      <div class="card-back">
+        <h1>Angelfish</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container" id="card4">
+    <div class="card" id="flippingCard4">
+      <div class="card-front">
+        <h1>P_ _ _ _ _f_ _ _</h1>
+        <img src="images/parrotfish.jpg" alt="Bird" id="cardImage4"height="250px">
+      </div>
+      <div class="card-back">
+        <h1>Parrotfish</h1>
+      </div>
+    </div>
+  </div> 
+
+  <div class="card-container" id="card5">
+    <div class="card" id="flippingCard5">
+      <div class="card-front">
+        <h1>O_ _ _ _ _ _</h1>
+        <img src="images/oarfich.jpg" alt="Bird" id="cardImage5" height="250px">
+      </div>
+      <div class="card-back">
+        <h1>Oarfish</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container" id="card6">
+    <div class="card" id="flippingCard6">
+      <div class="card-front">
+        <h1>C _ _ _ _ _ _ _ _</h1>
+        <img src="images/clownfish.jpg" alt="Bird" id="cardImage6" height="250px">
+      </div>
+      <div class="card-back">
+        <h1>Clownfish</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container" id="card7">
+    <div class="card" id="flippingCard7">
+      <div class="card-front">
+        <h1>F_ _ _ _ _ _ _ _</h1>
+        <img src="images/fangtooth.jpg" alt="Bird" id="cardImage7" height="250px">
+      </div>
+      <div class="card-back">
+        <h1>Fangtooth</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container" id="card8">
+    <div class="card" id="flippingCard8">
+      <div class="card-front">
+        <h1>H_ _i _ _ _</h1>
+        <img src="images/halibut.jpg" alt="Bird" id="cardImage8" height="250px">
+      </div>
+      <div class="card-back">
+        <h1>Halibut</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container" id="card9">
+    <div class="card" id="flippingCard9">
+      <div class="card-front">
+        <h1>A_ _ le_ _f_ _ _</h1>
+        <img src="images/anglerfish.jpg" alt="Bird" id="cardImage9" height="250px">
+      </div>
+      <div class="card-back">
+        <h1>Anglerfish</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container" id="card10">
+    <div class="card" id="flippingCard10">
+      <div class="card-front">
+        <h1>J_ _ _ D_ _ _</h1>
+        <img src="images/john dory.jpg" alt="Bird" id="cardImage10" height="250px">
+      </div>
+      <div class="card-back">
+        <h1>John Dory</h1>
+      </div>
+    </div>
+  </div>
+  <div class="controls">
+    <button class="button false" id="falseButton" onmouseover="showIDontKnow('cardImage1','cardImage2')"
+      onmouseout="hideIDontKnow('cardImage1','cardImage2','cardImage3','cardImage4','cardImage5','cardImage6','cardImage7','cardImage8','cardImage9','cardImage10')" onclick="nextCard(false)">
+      <img src="images/false.png" height="20px" width="20px">
+    </button>
+    <button class="button true" onmouseover="showIKnow('cardImage1','cardImage2')"
+      onmouseout="hideIKnow('cardImage1','cardImage2','cardImage3','cardImage4','cardImage5','cardImage6','cardImage7','cardImage8','cardImage9','cardImage10')" onclick="nextCard(true)">
+      <img src="images/True.png" height="20px" width="20px">
+    </button>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
